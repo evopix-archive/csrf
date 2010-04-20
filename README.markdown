@@ -6,7 +6,7 @@ Visit the [OWASP website](http://www.owasp.org/index.php/Cross-Site_Request_Forg
 
 # How does it work?
 
-When a form is requested this module generates a random token and stores both the time it was generated and the token itself in the users session. Then, the current time is appended to the token and it is inserted into the form. When the form is submitted this module checks the token's validity by first calculating the time between the forms rendering and submittion. If the differnce is 0 or longer than 30 seconds it is assumed the form was submitted by a bot and validation fails. If the first test passes then this module checks if the token matches a token currently stored in the users session, if it does then validation is succesfull and the form is submitted.
+When a form is requested this module generates a random token and stores both the time it was generated and the token itself in the users session. Then, the current time is appended to the token and it is inserted into the form. When the form is submitted this module checks the token's validity by first calculating the time between the forms rendering and submission. If the difference is 0 or longer than 30 seconds it is assumed the form was submitted by a bot and validation fails. If the first test passes then this module checks if the token matches a token currently stored in the users session, if it does then validation is successful and the form is submitted.
 
 # Won't this break tabbing and forward/back buttons?
 
